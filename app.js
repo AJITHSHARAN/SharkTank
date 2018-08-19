@@ -24,8 +24,13 @@ connection.connect(function(error)
 });
 app.get('/',function(req,res)
 {
-  var a= 'ROW=5';
-  connection.query("SELECT * FROM  SHARK1 WHERE "+a , function(err,rows,fields){
+
+res.render("home.ejs");
+});
+app.post("/season/:id",function(req,res)
+{
+  var sea=req.params.id;
+  connection.query("SELECT * FROM  SHARK1 WHERE "+sea , function(err,rows,fields){
 if(err)
 {
   console.log(err);
@@ -33,9 +38,17 @@ if(err)
 else
   {
     console.log("connected successfully");
-    console.log(rows);
+  var tab="<table border='1 px'><thead>"
+  tab+="<th>S.NO</th><th>SEASON</th><th>EPISODE</th><th>COMPANY</th><th>DEAL</th><th>INDUSTRY</th><th>GENDER</th><th>AMOUNT</th><th>EQUITY</th><th>VALUTION</th><th>CORCORAN</th><th>CUBAN</th><th>GREINER</th><th>HERJAVEC</th><th>JOHN</th><th>OLEARY</th><th>HARRINGTON</th><th>GUEST</th><th>SHARKS</th><th>$PERSHARK</th><th>DETAILS</th></thead><tbody>"
+  for(var i in rows)
+  {
+    tab+="<tr><td>"+i+"</td><td>"+rows[i].SEASON+"</td><td>"+rows[i].EPISODE+"</td><td>"+rows[i].COMPANY+"</td><td>"+rows[i].DEAL+"</td><td>"+rows[i].INDUSTRY+"</td><td>"+rows[i].GENDER+"</td><td>"+rows[i].AMOUNT+"</td><td>"+rows[i].EQUITY+"</td><td>";
+    tab+=rows[i].VALUATION+"</td><td>"+rows[i].CORCORAN+"</td><td>"+rows[i].CUBAN+"</td><td>"+rows[i].GREINER+"</td><td>"+rows[i].HERJAVEC+"</td><td>"+rows[i].JOHN+"</td><td>"+rows[i].OLEARY+"</td><td>"+rows[i].HARRINGTON+"</td><td>"+rows[i].GUEST+"</td><td>"+rows[i].SHARKS+"</td><td>"+rows[i].PERSHARK+"</td><td>";
+    tab+=rows[i].DETAILS+"</td></tr>"
+  }
+  tab+="</tbody></table>"
+    res.send(tab);
   }
 });
-res.render("home.ejs");
 });
 app.listen(1337);

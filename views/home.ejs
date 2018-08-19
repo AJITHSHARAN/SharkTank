@@ -3,46 +3,111 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NGO</title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Includ<!-Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script src="js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-<!-- Font Awesome -->
-<link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC|Racing+Sans+One|Ribeye" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Knewave|Lily+Script+One|Oleo+Script|Tenor+Sans|Yesteryear" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata|Lobster" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Forum" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
-</head>
+
+      </head>
 <body>
   <div class="form-check">
-    <p>1<input type="checkbox" class="form-check-input" id="season1"></p>
-    <p>2<input type="checkbox" class="form-check-input" id="season2"></p>
-    <p>3<input type="checkbox" class="form-check-input" id="season3"></p>
-    <p>4<input type="checkbox" class="form-check-input" id="season4"></p>
-    <p>5v<input type="checkbox" class="form-check-input" id="season5"></p>
-    <p>6<input type="checkbox" class="form-check-input" id="season6"></p>
-    <p>7<input type="checkbox" class="form-check-input" id="season7"></p>
+    <p>1<input type="checkbox" class="form-check-input" onclick="func('season=1 ')" value="season2">tjiyy</p>
+    <p>2<input type="checkbox" class="form-check-input" onclick="func('season=2 ')" value="season2"></p>
+    <p>3<input type="checkbox" class="form-check-input" onclick="func('season=3 ')" value="season2"></p>
+    <p>4<input type="checkbox" class="form-check-input" onclick="func('season=4 ')" value="season2"></p>
+    <p>5v<input type="checkbox" class="form-check-input" onclick="func('season=5 ')" value="season2"></p>
+    <p>6<input type="checkbox" class="form-check-input" onclick="func('season=6 ')" value="season2" ></p>
+    <p>7<input type="checkbox" class="form-check-input" onclick="func('season=7 ')" value="season2"></p>
+  </div>
+    <div class="form-check">
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=1 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=2 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=3 ')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=4 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=5 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=6 ')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=7 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=8 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=9 ')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=10 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=11 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=12')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=13 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=14 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=15')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=16 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=17 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=18 ')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=19 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=20 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=21')" value="season2"></p>
+      <p>1<input type="checkbox" class="form-check-input" onclick="func1('episode=21 ')" value="season2">tjiyy</p>
+      <p>2<input type="checkbox" class="form-check-input" onclick="func1('episode=22 ')" value="season2"></p>
+      <p>3<input type="checkbox" class="form-check-input" onclick="func1('episode=23 ')" value="season2"></p>
 
-</div>
+<div>
+<div id="table1"></div>
 </body>
+<script>
+var sea=[];
+var epi=[];
+function func(data1)
+{
+
+  var temp="(";
+  var num=0;
+  console.log("clicked");
+console.log(data1);
+if(data1.includes("season"))
+{
+  sea.push(data1);
+}
+if(data1.includes("episode"))
+{
+epi.push(data1);
+}
+for(i=0;i<sea.length-1;i++)
+{
+        num=1;
+        temp+=sea[i]+"or ";
+}
+if(sea.length>0)
+{
+    num=1;
+temp+=sea[sea.length-1]+ ')';
+}
+console.log(num);
+if(num==1 && epi.length>0)
+temp+=" and (";
+for(i=0;i<epi.length-1;i++)
+{
+        num=1;
+        temp+=epi[i]+"or ";
+}
+if(epi.length>0)
+{
+temp+=epi[epi.length-1]+')';
+}
+console.log(temp);
+  $.ajax({
+    url:"http://localhost:1337/season/"+temp,
+    method:"POST",
+    success:function(data)
+    {
+
+      document.getElementById("table1").innerHTML=data;
+    }
+  });
+}
+function func1(data){
+  func(data)
+}
+</script>
 </html>
