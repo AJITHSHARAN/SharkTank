@@ -1,10 +1,17 @@
-if(investors.includes(data1))
-{
-  if(investors.indexOf(data1)!=0)
-  investors = investors.slice(0, investors.indexOf(data1)).concat(investors.slice(investors.indexOf(data1)+1, investors.length));
-  else
-  investors = investors.slice(1, investors.length);
-}
-else {
-  investors.push(data1);
-}
+<h1>Amount</h1>
+<div class="custom-control custom-checkbox custom-control-inline">
+  <input type="checkbox" class="custom-control-input"  onclick="func1('50000 <= AMOUNT AND 100000 >= AMOUNT')" id="default4Inline1">
+  <label class="custom-control-label" for="default4Inline1">50000 to 100000</label>
+</div>
+
+<!-- default4 inline 2-->
+<div class="custom-control custom-checkbox custom-control-inline">
+  <input type="checkbox" class="custom-control-input" onclick="func1('100000 <= AMOUNT AND 1000000 >= AMOUNT')" id="default4Inline2">
+  <label class="custom-control-label" for="default4Inline2">100000 to 1000000</label>
+</div>
+
+<!-- default4 inline 3-->
+<div class="custom-control custom-checkbox custom-control-inline">
+  <input type="checkbox" class="custom-control-input"  onclick="func1('1000000 <= AMOUNT AND 10000000 >= AMOUNT')" id="default4Inline3">
+  <label class="custom-control-label" for="default4Inline3">More than 1000000</label>
+</div>
