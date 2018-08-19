@@ -1,0 +1,10 @@
+if(investors.includes(data1))
+{
+  if(investors.indexOf(data1)!=0)
+  investors = investors.slice(0, investors.indexOf(data1)).concat(investors.slice(investors.indexOf(data1)+1, investors.length));
+  else
+  investors = investors.slice(1, investors.length);
+}
+else {
+  investors.push(data1);
+}
